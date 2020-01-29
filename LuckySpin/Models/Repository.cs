@@ -1,19 +1,21 @@
 ﻿using System.Collections.Generic;
-
+using LuckySpin.ViewModels;
 namespace LuckySpin.Models
 {
     public class Repository
     {
-        private List<Spin> spins = new List<Spin>();
+        public Player CurrentPlayer { get; set; }
+        private List<SpinItViewModel> spins = new List<SpinItViewModel>();
 
-       //Property
-       public IEnumerable<Spin> PlayerSpins {
+        //Property
+        public IEnumerable<SpinItViewModel> PlayerSpins
+        {
 
             get { return spins; }
-       }
+        }
 
         //Access method
-        public void AddSpin(Spin s)
+        public void AddSpin(SpinItViewModel s)
         {
             spins.Add(s);
         }

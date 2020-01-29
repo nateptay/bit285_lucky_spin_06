@@ -1,4 +1,4 @@
-﻿@model IEnumerable<LuckySpin.Models.Spin> 
+﻿@model IEnumerable<LuckySpin.ViewModels.SpinItViewModel>
 @{
     Layout = "_Layout";
     int row = 0;
@@ -9,11 +9,13 @@
     <thead><tr><th>Spin #</th><th>Result</th></tr></thead>
     <tbody>
         <!-- TODO: Use the ViewModel-->
-        @foreach( LuckySpin.Models.Spin spin in @Model ){
+        @foreach (LuckySpin.ViewModels.SpinItViewModel spin in @Model)
+        {
             row += 1;
-            className = (spin.IsWinning) ? "winner" : "";
+            className = (spin.Winning) ? "winner" : "";
             <tr class="@className">
-                <td>@row</td> <td>@spin.IsWinning</td>
+                <td>@row</td>
+                <td>@spin.Winning</td>
             </tr>
         }
     </tbody>

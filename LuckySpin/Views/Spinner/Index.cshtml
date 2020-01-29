@@ -1,4 +1,4 @@
-﻿@model LuckySpin.Models.Player
+﻿@model LuckySpin.ViewModels.IndexViewModel
 <!-- TODO: Change model to a IndexViewModel-->
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
@@ -27,8 +27,8 @@
             <span asp-validation-for="Luck"></span>
         </label>
         <label>
-            $&nbsp;<input asp-for="StartingBalance" class="currency" />
-            <span asp-validation-for="StartingBalance"></span>
+            $&nbsp;<input asp-for="Balance" class="currency" />
+            <span asp-validation-for="Balance"></span>
         </label>
 
     </fieldset>
